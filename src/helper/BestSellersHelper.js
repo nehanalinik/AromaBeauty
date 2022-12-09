@@ -1,9 +1,9 @@
-import img1 from "../assets/Cosmetics Jar Mockup.png";
-import img2 from "../assets/Serum.png";
-import img3 from "../assets/Shampoo.png";
-import img4 from "../assets/Mockup4.png";
-import img5 from "../assets/BannerTubes.png";
-import img6 from "../assets/Combo Mockup.png";
+import img1 from "../assets/nightCream.jpg";
+import img2 from "../assets/Serum.jpg";
+import img3 from "../assets/Shampoo.jpg";
+import img4 from "../assets/showerGel.jpg";
+import img5 from "../assets/comboTube.jpg";
+import img6 from "../assets/comboPack.jpg";
 
 const BestSellersHelper = [
   {
