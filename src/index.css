@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+font-family: 'Merienda', cursive;
+font-family: 'Lora', serif;
+ */
+@layer base{
+    li{
+        @apply cursor-pointer list-none text-lg
+    }
+
+    body{
+        @apply bg-secondaryWhite overflow-x-hidden
+    }
+    image{
+        width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+    }
+    body {
+        font-family: 'Istok Web', sans-serif;
+        @apply text-secondaryBlack
+    }
+    .title{
+        font-family: 'Playfair Display', serif;
+        @apply text-[34px] inline-block text-secondaryBlack relative after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[6px] after:bg-primary
+    }
+    .primaryBtn{
+        @apply relative font-bold text-secondaryBlack transition-all after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[4px] after:bg-accentBlue hover:after:bg-accentBlueDark
+    }
+    .primaryRedBtn{
+        @apply relative font-bold text-secondaryBlack transition-all after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[4px] after:bg-red-300 hover:after:bg-red-500
+    }
+    .secondaryBtn{
+        @apply text-secondaryWhite bg-accentBlue py-2 px-7 shadow rounded transition-all hover:bg-accentBlueDark
+    }
+    .logo{
+        @apply font-["Merienda"] font-bold text-2xl smd:text-3xl text-primary
+    }
+    .product1{
+        @apply p-6 bg-primary/[.2] m-2 rounded w-full flex items-center justify-center
+    }
+    .product1 img{
+        @apply w-[250px]
+    }
+    .product2{
+        @apply p-6 bg-lightWhite m-2 rounded w-[230px] flex items-center justify-center
+    }
+    .categoryProduct{
+        @apply flex justify-center bg-green-400 p-4 smd:bg-gray-800 md:bg-pink-400 lg:bg-orange-400 xl:bg-slate-500
+    }
+    .categoryProduct img{
+        @apply w-[280px]
+    }
+    ::-webkit-scrollbar{
+        @apply w-2
+    }
+    ::-webkit-scrollbar-track {
+        @apply bg-secondaryWhite
+    }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-primary rounded-full
+    }
+}
