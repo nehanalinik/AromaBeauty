@@ -9,6 +9,7 @@ import slider3 from "../assets/slider3.jpg";
 const Carousel = () => {
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,

@@ -1,45 +1,45 @@
-import img1 from "../assets/nightCream.jpg";
-import img2 from "../assets/Serum.jpg";
-import img3 from "../assets/Shampoo.jpg";
-import img4 from "../assets/showerGel.jpg";
-import img5 from "../assets/comboTube.jpg";
-import img6 from "../assets/comboPack.jpg";
+import img1 from "../assets/Facewash-Oily.png";
+import img2 from "../assets/Facewash-Normal.png";
+import img3 from "../assets/Body-Wash.png";
+import img4 from "../assets/Body-Lotion.png";
+import img5 from "../assets/Shampoo-Daily.png";
+import img6 from "../assets/Shampoo-Strong.png";
 
 const BestSellersHelper = [
   {
     id: 1,
     image: img1,
-    title: "Night Cream with hyaluronic acid & Provitamin B5",
+    title: "Properly Clean facewash for oily skin",
     price: 52,
   },
   {
     id: 2,
     image: img2,
-    title: "Hydrating Serum For Much Plumper & Glowing Skin",
+    title: "Clean Bright facewash for all skin types",
     price: 44,
   },
   {
     id: 3,
     image: img3,
-    title: "Volumizing Shampoo with Biotin & Collagen",
+    title: "Deeply Nourishing Body Wash with lavender essential oils",
     price: 56,
   },
   {
     id: 4,
     image: img4,
-    title: "Mousturizing ShowerGel with teatree oil",
+    title: "Hydrating lotion with honey & shea butter",
     price: 58,
   },
   {
     id: 5,
     image: img5,
-    title: "Hydrating Facewash with avacado & Sunscreen with SPF 50",
+    title: "Mild Shampoo for daily use",
     price: 68,
   },
   {
     id: 6,
     image: img6,
-    title: "Natural Glow Combo with Vitamin C and Hyaluronic Acid",
+    title: "Nourishing Shampoo for strong hair",
     price: 89,
   },
 ];

@@ -36,10 +36,13 @@ font-family: 'Lora', serif;
         @apply relative font-bold text-secondaryBlack transition-all after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[4px] after:bg-red-300 hover:after:bg-red-500
     }
     .secondaryBtn{
-        @apply text-secondaryWhite bg-accentBlue py-2 px-7 shadow rounded transition-all hover:bg-accentBlueDark
+        @apply text-secondaryWhite bg-primaryBlue py-2 px-7 shadow rounded transition-all hover:bg-accentBlueDark
     }
     .logo{
-        @apply font-["Merienda"] font-bold text-2xl smd:text-3xl text-primary
+        @apply font-["Merienda"] font-bold text-2xl smd:text-3xl 
+    }
+    .subtitle{
+        @apply font-["Merienda"] text-accentBlue italic font-medium
     }
     .product1{
         @apply p-6 bg-primary/[.2] m-2 rounded w-full flex items-center justify-center
@@ -55,6 +58,12 @@ font-family: 'Lora', serif;
     }
     .categoryProduct img{
         @apply w-[280px]
+    }
+    .filterProducts{
+        @apply font-["Lora"]
+    }
+    .active{
+        @apply bg-green-400
     }
     ::-webkit-scrollbar{
         @apply w-2
