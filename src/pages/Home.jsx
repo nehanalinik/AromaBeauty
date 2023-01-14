@@ -6,7 +6,9 @@ import NewArrivals from "../components/NewArrivals";
 const Home = () => {
   return (
     <>
-      <NewArrivals />
+      <div className="my-8">
+        <NewArrivals />
+      </div>
       <BestSellers />
       {/* <Carousel /> */}
     </>

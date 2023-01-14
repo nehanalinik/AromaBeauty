@@ -7,7 +7,7 @@ const EmptyBag = () => {
       <h3 className="text-xl filterProducts">Nothing in your bag right now</h3>
       <p className="pb-6 text-lg">Shop to add items in your bag</p>
       <div>
-        <Link to="/" className="primaryBtn">
+        <Link to="/shop" className="primaryBtn">
           continue shopping
         </Link>
       </div>

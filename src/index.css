@@ -6,71 +6,90 @@
 font-family: 'Merienda', cursive;
 font-family: 'Lora', serif;
  */
-@layer base{
-    li{
+@layer base {
+    li {
         @apply cursor-pointer list-none text-lg
     }
 
-    body{
-        @apply bg-secondaryWhite overflow-x-hidden
-    }
-    image{
+    image {
         width: 100%;
     }
-    h1, h2, h3, h4, h5, h6{
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: 'Playfair Display', serif;
         font-weight: bold;
     }
+
     body {
         font-family: 'Istok Web', sans-serif;
-        @apply text-secondaryBlack
+        background: repeating-radial-gradient(circle,#fff3f1, transparent 20%);
+        background-size: 3em 3em;
+        @apply bg-secondaryWhite text-secondaryBlack overflow-x-hidden
     }
-    .title{
+
+
+    .title {
         font-family: 'Playfair Display', serif;
         @apply text-[34px] inline-block text-secondaryBlack relative after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[6px] after:bg-primary
     }
-    .primaryBtn{
+
+    .primaryBtn {
         @apply relative font-bold text-secondaryBlack transition-all after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[4px] after:bg-accentBlue hover:after:bg-accentBlueDark
     }
-    .primaryRedBtn{
+
+    .primaryRedBtn {
         @apply relative font-bold text-secondaryBlack transition-all after:content-[''] after:absolute after:bottom-[2px] after:left-0 after:w-[100%] after:h-[4px] after:bg-red-300 hover:after:bg-red-500
     }
-    .secondaryBtn{
+
+    .secondaryBtn {
         @apply text-secondaryWhite bg-primaryBlue py-2 px-7 shadow rounded transition-all hover:bg-accentBlueDark
     }
-    .logo{
-        @apply font-["Merienda"] font-bold text-2xl smd:text-3xl 
+
+    .logo {
+        @apply font-["Merienda"] font-bold text-2xl smd:text-3xl
     }
-    .subtitle{
+
+    .subtitle {
         @apply font-["Merienda"] text-accentBlue italic font-medium
     }
-    .product1{
+
+    .product1 {
         @apply p-6 bg-primary/[.2] m-2 rounded w-full flex items-center justify-center
     }
-    .product1 img{
+
+    .product1 img {
         @apply w-[250px]
     }
-    .product2{
+
+    .product2 {
         @apply p-6 bg-lightWhite m-2 rounded w-[230px] flex items-center justify-center
     }
-    .categoryProduct{
-        @apply flex justify-center bg-green-400 p-4 smd:bg-gray-800 md:bg-pink-400 lg:bg-orange-400 xl:bg-slate-500
+
+    .categoryProduct {
+        @apply flex justify-center p-4
     }
-    .categoryProduct img{
+
+    .categoryProduct img {
         @apply w-[280px]
     }
-    .filterProducts{
+
+    .filterProducts {
         @apply font-["Lora"]
     }
-    .active{
-        @apply bg-green-400
-    }
-    ::-webkit-scrollbar{
+
+    ::-webkit-scrollbar {
         @apply w-2
     }
+
     ::-webkit-scrollbar-track {
         @apply bg-secondaryWhite
     }
+
     ::-webkit-scrollbar-thumb {
         @apply bg-primary rounded-full
     }

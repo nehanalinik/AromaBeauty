@@ -9,7 +9,6 @@ const allCategories = [
   "all",
   ...new Set(AllProductsHelper.map((item) => item.category)),
 ];
-console.log(allCategories);
 const Shop = () => {
   const [products, setProducts] = useState(AllProductsHelper);
   const [categories, setCategories] = useState(allCategories);

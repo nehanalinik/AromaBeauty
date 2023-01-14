@@ -1,13 +1,10 @@
 import React from "react";
-import Login from "../components/Login";
-import Register from "../components/Register";
+import Profile from "../components/Profile";
 
-const User = () => {
+const User = ({ setLoginUser, user }) => {
   return (
-    <div className="max-w-[1240px] mx-auto">
-      <div>
-        <Login />
-      </div>
+    <div className="max-w-[1240px] mx-auto p-2">
+      <Profile setLoginUser={setLoginUser} user={user} />
     </div>
   );
 };

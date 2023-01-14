@@ -4,23 +4,27 @@ import { FiSearch } from "react-icons/fi";
 import { AiOutlineUser, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { CgShoppingBag } from "react-icons/cg";
 import { useSelector } from "react-redux";
-// import Search from "./Search";
+import { useScrollPosition } from "../hooks/useScrollPosition";
 
 const Navbar = () => {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+  const scrollPosition = useScrollPosition()
   const products = useSelector((state) => state.cart.cartItems);
   const [menu, setMenu] = useState(false);
-  // const handleClick = () => {
-  //   setMenu(!menu);
-  // };
   return (
-    <header className="h-full">
+    <header className={classNames(scrollPosition > 60 ? "sticky top-0 w-full z-10 backdrop-blur":"sticky top-0 w-full z-10")}>
       <div className="flex justify-between items-center h-[8vh] w-full smd:hidden">
         <div className="relative flex text-secondaryBlack items-center">
           {menu && (
-            <div className="absolute p-4 top-[5.65vh] left-0 bg-primary h-[92vh] w-[100vw] z-10">
+            <div className="fixed p-4 top-[8vh] left-0 border-t-2 border-primaryBlue h-[92vh] w-[100vw] bg-secondaryWhite">
               <ul>
                 <li onClick={() => setMenu(!menu)}>
-                  <NavLink to="/shop" className="cursor-pointer">
+                  <NavLink
+                    to="/shop"
+                    className="cursor-pointer text-primaryBlue transition-all hover:text-primary"
+                  >
                     Shop
                   </NavLink>
                 </li>
@@ -35,13 +39,21 @@ const Navbar = () => {
 
           <div onClick={() => setMenu(!menu)} className="px-4">
             {menu ? (
-              <AiOutlineClose fontSize={22} className="cursor-pointer" />
+              <AiOutlineClose
+                fontSize={22}
+                className="cursor-pointer text-primaryBlue transition-all "
+              />
             ) : (
-              <AiOutlineMenu fontSize={22} className="cursor-pointer" />
+              <AiOutlineMenu
+                fontSize={22}
+                className="cursor-pointer text-primaryBlue transition-all "
+              />
             )}
           </div>
           <div>
-            <FiSearch fontSize={22} />
+            <NavLink className="text-primaryBlue transition-all hover:text-primary">
+              <FiSearch fontSize={22} />
+            </NavLink>
           </div>
         </div>
 
@@ -52,21 +64,29 @@ const Navbar = () => {
         </div>
         <ul className="flex items-center text-secondaryBlack space-x-4">
           <li>
-            <NavLink to="/user">
+            <NavLink
+              to="/user"
+              className="text-primaryBlue transition-all hover:text-primary"
+            >
               <AiOutlineUser fontSize={22} />
             </NavLink>
           </li>
           <li className="pr-4 relative">
-            <NavLink to="/cart">
+            <NavLink
+              to="/cart"
+              className="text-primaryBlue transition-all hover:text-primary"
+            >
               <CgShoppingBag fontSize={22} />
 
-              <div className="absolute bottom-3 left-2 bg-secondaryBlack text-primary font-semibold px-1 rounded-full text-sm">
+              <div className="absolute bottom-3 left-2 text-secondaryBlack bg-primary font-semibold px-1 rounded-full text-sm">
                 {products.length}
               </div>
             </NavLink>
           </li>
         </ul>
       </div>
+
+      {/* desktop */}
       <div className="hidden smd:flex">
         <div className="max-w-[1240px] mx-auto h-[8vh] px-4 w-full flex items-center justify-between">
           <div className="logo text-primaryBlue">
@@ -77,7 +97,10 @@ const Navbar = () => {
           <div>
             <ul className="text-secondaryBlack flex items-center space-x-4">
               <li>
-                <NavLink to="/shop" className="cursor-pointer">
+                <NavLink
+                  to="/shop"
+                  className="cursor-pointer text-primaryBlue transition-all hover:text-primary"
+                >
                   Shop
                 </NavLink>
               </li>
@@ -87,20 +110,25 @@ const Navbar = () => {
                 </NavLink>
               </li> */}
               <li>
-                <NavLink>
+                <NavLink className="text-primaryBlue transition-all hover:text-primary">
                   <FiSearch fontSize={22} />
                 </NavLink>
-                {/* {menu && <Search handleClick={handleClick} />} */}
               </li>
               <li>
-                <NavLink to="/user">
+                <NavLink
+                  to="/user"
+                  className="text-primaryBlue transition-all hover:text-primary"
+                >
                   <AiOutlineUser fontSize={22} />
                 </NavLink>
               </li>
               <li className="relative">
-                <NavLink to="/cart">
+                <NavLink
+                  to="/cart"
+                  className="text-primaryBlue transition-all hover:text-primary"
+                >
                   <CgShoppingBag fontSize={22} />
-                  <div className="absolute bottom-3 left-2 bg-secondaryBlack text-primary font-semibold px-1 rounded-full text-sm">
+                  <div className="absolute bottom-3 left-2 text-secondaryBlack bg-primary font-semibold px-1 rounded-full text-sm">
                     {products.length}
                   </div>
                 </NavLink>

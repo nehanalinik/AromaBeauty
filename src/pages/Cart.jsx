@@ -4,6 +4,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { FaCheckCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import EmptyBag from "../components/EmptyBag";
+import NewArrivals from "../components/NewArrivals";
 import {
   increaseItemsQty,
   removeItemsFromCart,
@@ -59,7 +60,7 @@ const Cart = () => {
                             onClick={() => decreaseItem(product)}
                             className="hover:text-accentBlueDark cursor-pointer"
                           >
-                            <AiOutlineMinus fontSize={22} />
+                            <AiOutlineMinus fontSize={20} />
                           </div>
                           <div className="border-x border-secondaryBlack px-3 smd:px-4 md:px-5 lg:px-8">
                             {cartQuantity}
@@ -68,13 +69,13 @@ const Cart = () => {
                             className="hover:text-accentBlueDark cursor-pointer"
                             onClick={() => increaseItem(product)}
                           >
-                            <AiOutlinePlus fontSize={22} />
+                            <AiOutlinePlus fontSize={20} />
                           </div>
                         </div>
                       </div>
                       <div className="col-span-2 flex flex-col space-y-4 md:justify-between">
                         <div className="flex justify-between">
-                          <div className="text-sm md:text-lg">{title}</div>
+                          <div className="text-md md:text-lg">{title}</div>
                           <div className="font-bold text-xl text-secondaryBlack">
                             ${price * cartQuantity}
                           </div>
@@ -179,13 +180,20 @@ const Cart = () => {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button className="secondaryBtn uppercase text-center w-full font-bold bg-primary">
+              <button className="secondaryBtn uppercase text-center w-full font-bold bg-primaryBlue hover:bg-primary">
                 Checkout
               </button>
             </div>
           </div>
         </div>
       )}
+
+      <div className="text-center mt-8 p-6">
+        <p className="subtitle text-xl">
+          You might wanna add this in your cart.
+        </p>
+      </div>
+      <NewArrivals />
     </div>
   );
 };
