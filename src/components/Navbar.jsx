@@ -8,13 +8,19 @@ import { useScrollPosition } from "../hooks/useScrollPosition";
 
 const Navbar = () => {
   function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(" ");
   }
-  const scrollPosition = useScrollPosition()
+  const scrollPosition = useScrollPosition();
   const products = useSelector((state) => state.cart.cartItems);
   const [menu, setMenu] = useState(false);
   return (
-    <header className={classNames(scrollPosition > 60 ? "sticky top-0 w-full z-10 backdrop-blur":"sticky top-0 w-full z-10")}>
+    <header
+      className={classNames(
+        scrollPosition > 60
+          ? "sticky top-0 w-full z-10 backdrop-blur"
+          : "sticky top-0 w-full z-10"
+      )}
+    >
       <div className="flex justify-between items-center h-[8vh] w-full smd:hidden">
         <div className="relative flex text-secondaryBlack items-center">
           {menu && (
@@ -50,11 +56,11 @@ const Navbar = () => {
               />
             )}
           </div>
-          <div>
+          {/* <div>
             <NavLink className="text-primaryBlue transition-all hover:text-primary">
               <FiSearch fontSize={22} />
             </NavLink>
-          </div>
+          </div> */}
         </div>
 
         <div className="logo text-primaryBlue">
@@ -63,14 +69,14 @@ const Navbar = () => {
           </NavLink>
         </div>
         <ul className="flex items-center text-secondaryBlack space-x-4">
-          <li>
+          {/* <li>
             <NavLink
               to="/user"
               className="text-primaryBlue transition-all hover:text-primary"
             >
               <AiOutlineUser fontSize={22} />
             </NavLink>
-          </li>
+          </li> */}
           <li className="pr-4 relative">
             <NavLink
               to="/cart"
@@ -109,19 +115,19 @@ const Navbar = () => {
                   Our Story
                 </NavLink>
               </li> */}
-              <li>
+              {/* <li>
                 <NavLink className="text-primaryBlue transition-all hover:text-primary">
                   <FiSearch fontSize={22} />
                 </NavLink>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <NavLink
                   to="/user"
                   className="text-primaryBlue transition-all hover:text-primary"
                 >
                   <AiOutlineUser fontSize={22} />
                 </NavLink>
-              </li>
+              </li> */}
               <li className="relative">
                 <NavLink
                   to="/cart"
